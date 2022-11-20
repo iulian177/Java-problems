@@ -1,0 +1,48 @@
+package proiect;
+
+class Dog {
+    private int size;
+    public int getSize(){
+        return size;
+    }
+    public void setSize(int s){
+        size=s;
+    }
+    void bark(){
+        if (size > 60){
+            System.out.println ("Gaf-gaf!");
+        }
+        else if(size > 14){
+            System.out.println ("Vuf-vuf!");
+        }
+        else {
+            System.out.println ("Tiaf-tiaf");
+        }
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args) {
+    Dog one = new Dog();
+    one.setSize (70);
+    one.setSize (50);
+    Dog two = new Dog();
+    two.setSize (8);
+    Dog last = new Dog();
+    last.setSize (15);
+    
+    System.out.println ("First dog: " + one.getSize() +" kg");
+    
+    one.bark();
+    
+    System.out.println ("Second dog: " + two.getSize() +" kg");
+    
+    two.bark();
+    
+    System.out.println("Last dog: " + last.getSize() + " kg");
+    
+    last.bark();
+    
+    }
+}
